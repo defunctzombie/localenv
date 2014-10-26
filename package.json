@@ -1,0 +1,32 @@
+{
+  "name": "localenv",
+  "version": "0.0.0",
+  "description": "load environment variables from .env files",
+  "main": "./index.js",
+  "scripts": {
+    "test": "mocha --ui qunit --reporter list --bail --check-leaks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/defunctzombie/localenv.git"
+  },
+  "keywords": [
+    "dotenv",
+    "env",
+    "environment",
+    "variables",
+    "config"
+  ],
+  "author": "Roman Shtylman <shtylman@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/defunctzombie/localenv/issues"
+  },
+  "homepage": "https://github.com/defunctzombie/localenv",
+  "devDependencies": {
+    "mocha": "2.0.1"
+  },
+  "dependencies": {
+    "debug": "2.1.0"
+  }
+}
