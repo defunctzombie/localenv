@@ -1,4 +1,4 @@
-# localenv
+# localenv [![Build Status](https://travis-ci.org/defunctzombie/localenv.svg)](https://travis-ci.org/defunctzombie/localenv)
 
 Load environment variables from `.env` into `process.env` in *development*.
 
