@@ -1,6 +1,6 @@
 {
   "name": "localenv",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "load environment variables from .env files",
   "main": "./index.js",
   "scripts": {
@@ -26,6 +26,5 @@
   "devDependencies": {
     "mocha": "2.0.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
