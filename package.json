@@ -27,6 +27,5 @@
     "mocha": "2.0.1"
   },
   "dependencies": {
-    "debug": "2.1.0"
   }
 }
