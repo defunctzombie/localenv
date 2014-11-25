@@ -30,6 +30,6 @@
     "mocha": "2.0.1"
   },
   "dependencies": {
-    "commander": "^2.5.0"
+    "commander": "2.5.0"
   }
 }
