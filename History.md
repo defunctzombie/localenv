@@ -1,3 +1,7 @@
+# UNRELEASED
+
+* add CLI
+
 # 0.1.1 (2014-10-29)
 
 * remove debug dependency
