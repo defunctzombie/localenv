@@ -1,0 +1,47 @@
+#!/usr/bin/env node
+
+var path = require('path');
+var program = require('commander');
+var spawn = require('child_process').spawn;
+
+var localenv = require('localenv/noload');
+
+var firstDoubleDashPos = process.argv.indexOf('--');
+
+var options =
+  program
+    .version(require('../package.json').version)
+    .usage('[envFile] -- <command> [commandArgs ...]')
+    .parse(process.argv);
+
+if (
+  // usage requires at least a <command>
+  options.args.length === 0 ||
+  // usage requires that the <command> is inserted after `--`
+  // so we need at least one occurence of `--`
+  firstDoubleDashPos === -1) {
+  program.help();
+}
+
+// localenv [envFile] -- <command> [commandArgs]
+var envFile = process.argv.slice(0, firstDoubleDashPos)[2];
+
+// localenv -- <command> [commandArgs]
+if (!envFile) {
+  envFile = '.env';
+}
+
+// localenv [envfile]
+envFile = path.resolve(process.cwd(), envFile);
+
+var command = process.argv.slice(firstDoubleDashPos + 1)[0];
+var commandArgs = process.argv.slice(firstDoubleDashPos + 2);
+
+localenv.inject_env(envFile);
+
+spawn(command, commandArgs, {
+  // this is the default of child_process.spawn
+  // here to reduce FUD
+  env: process.env,
+  stdio: 'inherit'
+});

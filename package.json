@@ -6,6 +6,9 @@
   "scripts": {
     "test": "mocha --ui qunit --reporter list --bail --check-leaks"
   },
+  "bin": {
+    "localenv": "bin/localenv"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/defunctzombie/localenv.git"
@@ -26,5 +29,7 @@
   "devDependencies": {
     "mocha": "2.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "commander": "2.5.0"
+  }
 }
