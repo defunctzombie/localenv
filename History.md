@@ -1,11 +1,15 @@
+# UNRELEASED
+
+  * forward SIGTERM/SIGINT to spawned child in CLI
+
 # 0.2.0 (2014-11-25)
 
-* add CLI
+  * add CLI
 
 # 0.1.1 (2014-10-29)
 
-* remove debug dependency
+  * remove debug dependency
 
 # 0.1.0 (2014-10-26)
 
-* initial commit
+  * initial commit
