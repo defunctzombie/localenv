@@ -1,4 +1,4 @@
-# UNRELEASED
+# 0.2.1 (2014-11-27)
 
   * forward SIGTERM/SIGINT to spawned child in CLI
 
