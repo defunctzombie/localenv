@@ -39,9 +39,17 @@ var commandArgs = process.argv.slice(firstDoubleDashPos + 2);
 
 localenv.inject_env(envFile);
 
-spawn(command, commandArgs, {
+var child = spawn(command, commandArgs, {
   // this is the default of child_process.spawn
   // here to reduce FUD
   env: process.env,
   stdio: 'inherit'
 });
+
+['SIGTERM', 'SIGINT'].forEach(function listenAndKill(signalName) {
+  process.on(signalName, killChild);
+});
+
+function killChild(signal) {
+  child.kill(signal);
+}
