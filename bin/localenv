@@ -47,7 +47,7 @@ var child = spawn(command, commandArgs, {
 });
 
 ['SIGTERM', 'SIGINT'].forEach(function listenAndKill(signalName) {
-  process.on(signalName, killChild);
+  process.on(signalName, killChild.bind(null, signalName));
 });
 
 function killChild(signal) {
