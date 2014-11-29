@@ -1,3 +1,7 @@
+# 0.2.2 (2014-11-29)
+
+  * fix: send the right signal to spawned child
+
 # 0.2.1 (2014-11-27)
 
   * forward SIGTERM/SIGINT to spawned child in CLI
