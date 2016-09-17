@@ -62,7 +62,7 @@ Precensece is followed in this order. If a particular variable is already set by
 
 >Credentials should only be accessible on the machines that need access to them. Never commit sensitive information to a repository that is not needed by every development machine and server. [1]
 
-The `.env` file is a great localtion to document all of the environment settings used by your app. As they change, this file will continue to reflect the defaults.
+The `.env` file is a great location to document all of the environment settings used by your app. As they change, this file will continue to reflect the defaults.
 
 ***Note***: Do not commit your `.env.local` file which is personal to your machine and may be used to temporarily override the defaults provided by the project `.env` file.
 
