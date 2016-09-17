@@ -48,7 +48,7 @@ API_URL=http://localtest:5000
 
 ## Load order
 
-Precensece is followed in this order. If a particular variable is already set by the time a file is loaded, the env var in the file will be ignored. In this way, `process.env` has the highest precedence and `.env` the lowest.
+Precedence is followed in this order. If a particular variable is already set by the time a file is loaded, the env var in the file will be ignored. In this way, `process.env` has the highest precedence and `.env` the lowest.
 
 * `process.env`
 * `.env.local`
